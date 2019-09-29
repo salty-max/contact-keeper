@@ -1,0 +1,48 @@
+h2.subtitle {
+  color: $primary;
+}
+
+a.button,
+button.button,
+input.button {
+  border-radius: $radius;
+  font-weight: bold;
+  @include transition(all .3s ease);
+  @include box-shadow;
+
+  &.is-outlined {
+    box-shadow: none;
+  }
+}
+
+.input {
+  caret-color: $primary;
+  @include transition(all .3s ease);
+}
+
+.card {
+  border-radius: $radius;
+}
+
+article.notification {
+  &.is-primary {
+    background-color: $primary-background-light;
+    color: $primary-text-dark;
+  }
+  &.is-danger {
+    background-color: $danger-background-light;
+    color: $danger-text-dark;
+  }
+  &.is-warning {
+    background-color: $warning-background-light;
+    color: $warning-text-dark;
+  }
+  &.is-success {
+    background-color: $success-background-light;
+    color: $success-text-dark;
+  }
+}
+
+.lead {
+  font-weight: 700;
+}
