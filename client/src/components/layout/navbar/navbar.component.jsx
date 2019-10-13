@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react'
+import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
 
 const Navbar = ({ title, icon }) => {
@@ -10,12 +11,12 @@ const Navbar = ({ title, icon }) => {
       aria-label='main navigation'
     >
       <div className='navbar-brand'>
-        <a className='navbar-item' href='https://bulma.io'>
+        <Link className='navbar-item' to='https://bulma.io'>
           <span className='icon'>
             <i className={`fas fa-${icon}`} />
           </span>
           <span>{title}</span>
-        </a>
+        </Link>
 
         <a
           role='button'
@@ -30,12 +31,12 @@ const Navbar = ({ title, icon }) => {
       </div>
       <div className='navbar-menu'>
         <div className='navbar-end'>
-          <a href='/' className='navbar-item'>
+          <Link to='/' className='navbar-item'>
             Home
-          </a>
-          <a href='/about' className='navbar-item'>
+          </Link>
+          <Link to='/about' className='navbar-item'>
             About
-          </a>
+          </Link>
         </div>
       </div>
     </nav>

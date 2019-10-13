@@ -10,8 +10,8 @@
 @import '~@fortawesome/fontawesome-pro/scss/fontawesome';
 
 // Pages
-@import './pages/home/home.styles.scss';
-@import './pages/about/about.styles.scss';
+@import './components/pages/home/home.styles.scss';
+@import './components/pages/about/about.styles.scss';
 
 // Components
 @import './components/layout/navbar/navbar.styles';

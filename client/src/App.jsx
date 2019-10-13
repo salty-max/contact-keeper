@@ -2,14 +2,16 @@ import React from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import './App.scss'
 
+import ContactState from './context/contact/contact.state'
+
 import Navbar from './components/layout/navbar/navbar.component'
 import HomePage from './components/pages/home/home.component'
 import AboutPage from './components/pages/about/about.component'
 
 const App = () => {
   return (
-    <Router>
-      <>
+    <ContactState>
+      <Router>
         <Navbar />
         <main className='section'>
           <div className='container'>
@@ -19,8 +21,8 @@ const App = () => {
             </Switch>
           </div>
         </main>
-      </>
-    </Router>
+      </Router>
+    </ContactState>
   )
 }
 
