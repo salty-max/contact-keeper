@@ -1,225 +1,225 @@
 // PADDING
 .p {
-  padding: 0.5rem;
+  padding: $pm-size-small;
 }
 
 .p-1 {
-  padding: 1rem;
+  padding: $pm-size;
 }
 
 .p-2 {
-  padding: 2rem;
+  padding: $pm-size-medium;
 }
 
 .p-3 {
-  padding: 3rem;
+  padding: $pm-size-large;
 }
 
 .py {
-  padding: 0.5rem 0;
+  padding: $pm-size-small 0;
 }
 
 .py-1 {
-  padding: 1rem 0;
+  padding: $pm-size 0;
 }
 
 .py-2 {
-  padding: 2rem 0;
+  padding: $pm-size-medium 0;
 }
 
 .py-3 {
-  padding: 3rem 0;
+  padding: $pm-size-large 0;
 }
 
 .px {
-  padding: 0 0.5rem;
+  padding: 0 $pm-size-small;
 }
 
 .px-1 {
-  padding: 0 1rem;
+  padding: 0 $pm-size;
 }
 
 .px-2 {
-  padding: 0 2rem;
+  padding: 0 $pm-size-medium;
 }
 
 .px-3 {
-  padding: 0 3rem;
+  padding: 0 $pm-size-large;
 }
 
 .pt {
-  padding: 0.5rem 0 0;
+  padding: $pm-size-small 0 0;
 }
 
 .pt-1 {
-  padding: 1rem 0 0;
+  padding: $pm-size 0 0;
 }
 
 .pt-2 {
-  padding: 2rem 0 0;
+  padding: $pm-size-medium 0 0;
 }
 
 .pt-3 {
-  padding: 3rem 0 0;
+  padding: $pm-size-large 0 0;
 }
 
 .pb {
-  padding: 0 0 0.5rem;
+  padding: 0 0 $pm-size-small;
 }
 
 .pb-1 {
-  padding: 0 0 1rem;
+  padding: 0 0 $pm-size;
 }
 
 .pb-2 {
-  padding: 0 0 2rem;
+  padding: 0 0 $pm-size-medium;
 }
 
 .pb-3 {
-  padding: 0 0 3rem;
+  padding: 0 0 $pm-size-large;
 }
 
 .pl {
-  padding: 0 0 0 0.5rem;
+  padding: 0 0 0 $pm-size-small;
 }
 
 .pl-1 {
-  padding: 0 0 0 1rem;
+  padding: 0 0 0 $pm-size;
 }
 
 .pl-2 {
-  padding: 0 0 0 2rem;
+  padding: 0 0 0 $pm-size-medium;
 }
 
 .pl-3 {
-  padding: 0 0 0 3rem;
+  padding: 0 0 0 $pm-size-large;
 }
 
 .pr {
-  padding: 0 0.5rem 0 0;
+  padding: 0 $pm-size-small 0 0;
 }
 
 .pr-1 {
-  padding: 0 1rem 0 0;
+  padding: 0 $pm-size 0 0;
 }
 
 .pr-2 {
-  padding: 0 2rem 0 0;
+  padding: 0 $pm-size-medium 0 0;
 }
 
 .pr-3 {
-  padding: 0 3rem 0 0;
+  padding: 0 $pm-size-large 0 0;
 }
 
 // MARGIN
 .m {
-  margin: 0.5rem;
+  margin: $pm-size-small;
 }
 
 .m-1 {
-  margin: 1rem;
+  margin: $pm-size;
 }
 
 .m-2 {
-  margin: 2rem;
+  margin: $pm-size-medium;
 }
 
 .m-3 {
-  margin: 3rem;
+  margin: $pm-size-large;
 }
 
 .my {
-  margin: 0.5rem 0;
+  margin: $pm-size-small 0;
 }
 
 .my-1 {
-  margin: 1rem 0;
+  margin: $pm-size 0;
 }
 
 .my-2 {
-  margin: 2rem 0;
+  margin: $pm-size-medium 0;
 }
 
 .my-3 {
-  margin: 3rem 0;
+  margin: $pm-size-large 0;
 }
 
 .mx {
-  margin: 0 0.5rem;
+  margin: 0 $pm-size-small;
 }
 
 .mx-1 {
-  margin: 0 1rem;
+  margin: 0 $pm-size;
 }
 
 .mx-2 {
-  margin: 0 2rem;
+  margin: 0 $pm-size-medium;
 }
 
 .mx-3 {
-  margin: 0 3rem;
+  margin: 0 $pm-size-large;
 }
 
 .mt {
-  margin: 0.5rem 0 0;
+  margin: $pm-size-small 0 0;
 }
 
 .mt-1 {
-  margin: 1rem 0 0;
+  margin: $pm-size 0 0;
 }
 
 .mt-2 {
-  margin: 2rem 0 0;
+  margin: $pm-size-medium 0 0;
 }
 
 .mt-3 {
-  margin: 3rem 0 0;
+  margin: $pm-size-large 0 0;
 }
 
 .mb {
-  margin: 0 0 0.5rem;
+  margin: 0 0 $pm-size-small;
 }
 
 .mb-1 {
-  margin: 0 0 1rem;
+  margin: 0 0 $pm-size;
 }
 
 .mb-2 {
-  margin: 0 0 2rem;
+  margin: 0 0 $pm-size-medium;
 }
 
 .mb-3 {
-  margin: 0 0 3rem;
+  margin: 0 0 $pm-size-large;
 }
 
 .ml {
-  margin: 0 0 0 0.5rem;
+  margin: 0 0 0 $pm-size-small;
 }
 
 .ml-1 {
-  margin: 0 0 0 1rem;
+  margin: 0 0 0 $pm-size;
 }
 
 .ml-2 {
-  margin: 0 0 0 2rem;
+  margin: 0 0 0 $pm-size-medium;
 }
 
 .ml-3 {
-  margin: 0 0 0 3rem;
+  margin: 0 0 0 $pm-size-large;
 }
 
 .mr {
-  margin: 0 0.5rem 0 0;
+  margin: 0 $pm-size-small 0 0;
 }
 
 .mr-1 {
-  margin: 0 1rem 0 0;
+  margin: 0 $pm-size 0 0;
 }
 
 .mr-2 {
-  margin: 0 2rem 0 0;
+  margin: 0 $pm-size-medium 0 0;
 }
 
 .mr-3 {
-  margin: 0 3rem 0 0;
+  margin: 0 $pm-size-large 0 0;
 }
