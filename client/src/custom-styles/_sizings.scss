@@ -1,4 +1,8 @@
 // PADDING
+.p-none {
+  padding: 0;
+}
+
 .p {
   padding: $pm-size-small;
 }

@@ -3,8 +3,12 @@
 @import 'custom-styles/custom-variables';
 @import 'custom-styles/mixins';
 @import 'custom-styles/sizings';
+@import 'custom-styles/positions';
 @import 'custom-styles/colors';
 @import 'custom-styles/globals';
+
+// Bulma
+@import '~bulma/bulma';
 
 // Mixins
 @include is-lighter();

@@ -17,6 +17,12 @@ input.button {
   &.is-outlined {
     box-shadow: none;
   }
+
+  &.is-small {
+    border-radius: $radius;
+    padding-left: $pm-size;
+    padding-right: $pm-size;
+  }
 }
 
 .input {

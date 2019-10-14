@@ -1,0 +1,30 @@
+.card {
+  &:not(:last-child) {
+    margin-bottom: $pm-size;
+  }
+  &-header {
+    align-items: center;
+    padding: $card-header-padding;
+
+    h3 {
+      padding: 0;
+    }
+
+    .tag {
+      text-transform: capitalize;
+    }
+  }
+
+  li {
+    margin-bottom: $pm-size-small;
+  }
+
+  .actions {
+    display: flex;
+    justify-content: flex-end;
+
+    button:not(:last-child) {
+      margin-right: $pm-size-small;
+    }
+  }
+}

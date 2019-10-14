@@ -4,14 +4,15 @@
 @import 'custom-styles/all';
 
 // External frameworks
-@import '~bulma/bulma';
 @import '~@fortawesome/fontawesome-pro/scss/brands';
 @import '~@fortawesome/fontawesome-pro/scss/solid';
 @import '~@fortawesome/fontawesome-pro/scss/fontawesome';
 
 // Pages
-@import './components/pages/home/home.styles.scss';
-@import './components/pages/about/about.styles.scss';
+@import './pages/home/home.styles.scss';
+@import './pages/about/about.styles.scss';
 
 // Components
 @import './components/layout/navbar/navbar.styles';
+@import './components/contacts-overview/contacts-overview.styles';
+@import './components/contact-item/contact-item.styles';
