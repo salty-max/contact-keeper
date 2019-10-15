@@ -7,7 +7,7 @@ const ContactItem = ({ id, name, email, phone, type }) => {
       <div className='card-header'>
         <h3 className='card-header-title'>{name}</h3>
         <span
-          className={`tag ${type === 'personal' ? 'is-primary' : 'is-success'}`}
+          className={`tag ${type === 'personal' ? 'is-info' : 'is-success'}`}
         >
           {type}
         </span>
@@ -51,7 +51,7 @@ const ContactItem = ({ id, name, email, phone, type }) => {
 }
 
 ContactItem.propTypes = {
-  id: PropTypes.number.isRequired,
+  id: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   email: PropTypes.string.isRequired,
   phone: PropTypes.string.isRequired,

@@ -1,12 +1,13 @@
 import React from 'react'
 
 import ContactsOverview from '../../components/contacts-overview/contacts-overview.component'
+import ContactForm from '../../components/contact-form/contact-form.component'
 
 const HomePage = () => {
   return (
-    <div className='home grid-2'>
+    <div className='home grid-2 gap-large'>
       <div>
-        <h1>Contact form</h1>
+        <ContactForm />
       </div>
       <ContactsOverview />
     </div>

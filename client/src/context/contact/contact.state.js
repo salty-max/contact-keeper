@@ -1,7 +1,5 @@
 import React, { useReducer } from 'react'
 import logger from 'use-reducer-logger'
-import uuid from 'uuid'
-
 import {
   ADD_CONTACT,
   DELETE_CONTACT,
@@ -11,6 +9,8 @@ import {
   FILTER_CONTACTS,
   CLEAR_FILTER,
 } from '../types'
+import uuid from 'uuid'
+
 import ContactContext from './contact.context'
 import ContactReducer from './contact.reducer'
 
@@ -18,21 +18,21 @@ const ContactState = props => {
   const initialState = {
     contacts: [
       {
-        id: 1,
+        id: '1',
         name: 'John Doe',
         email: 'john@test.me',
         phone: '111-111-1111',
         type: 'personal',
       },
       {
-        id: 2,
+        id: '2',
         name: 'Jane Doe',
         email: 'jane@test.me',
         phone: '222-222-2222',
         type: 'personal',
       },
       {
-        id: 3,
+        id: '3',
         name: 'Albus Dumbledore',
         email: 'albus@hogwarts.co.uk',
         phone: '333-333-3333',
@@ -48,12 +48,21 @@ const ContactState = props => {
     initialState
   )
 
-  // TODO: Actions
+  const addContact = contact => {
+    dispatch({
+      type: ADD_CONTACT,
+      payload: {
+        id: uuid.v4(),
+        ...contact,
+      },
+    })
+  }
 
   return (
     <ContactContext.Provider
       value={{
         contacts: state.contacts,
+        addContact,
       }}
     >
       {props.children}
