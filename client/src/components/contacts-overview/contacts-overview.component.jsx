@@ -11,7 +11,7 @@ const ContactsOverview = () => {
   return (
     <div className='contacts-overview'>
       {contacts.map(contact => (
-        <ContactItem key={contact.id} {...contact} />
+        <ContactItem key={contact.id} contact={contact} />
       ))}
     </div>
   )

@@ -1,10 +1,12 @@
-import React, { useState, useContext } from 'react'
+import React, { useState, useContext, useEffect } from 'react'
 import FormInput from '../form-input/form-input.component'
 
 import ContactContext from '../../context/contact/contact.context'
 
 const ContactForm = () => {
-  const context = useContext(ContactContext)
+  const { addContact, updateContact, clearCurrent, current } = useContext(
+    ContactContext
+  )
 
   const [contact, setContact] = useState({
     name: '',
@@ -12,6 +14,17 @@ const ContactForm = () => {
     phone: '',
     type: 'personal',
   })
+
+  useEffect(() => {
+    if (current) setContact(current)
+    else
+      setContact({
+        name: '',
+        email: '',
+        phone: '',
+        type: 'personal',
+      })
+  }, [current])
 
   const { name, email, phone, type } = contact
 
@@ -22,7 +35,7 @@ const ContactForm = () => {
 
   const handleSubmit = e => {
     e.preventDefault()
-    context.addContact(contact)
+    current ? updateContact(contact) : addContact(contact)
     setContact({
       name: '',
       email: '',
@@ -31,14 +44,18 @@ const ContactForm = () => {
     })
   }
 
+  const clearAll = () => {
+    clearCurrent()
+  }
+
   return (
     <form onSubmit={handleSubmit}>
       <FormInput
         type='text'
         name='name'
         placeholder='Name'
-        value={name}
         icon='user'
+        value={name}
         handleChange={handleChange}
       />
       <FormInput
@@ -83,15 +100,40 @@ const ContactForm = () => {
           </label>
         </div>
       </div>
-      <button
-        type='submit'
-        className='button is-primary is-fullwidth has-shadow'
-      >
-        <span className='icon'>
-          <i className='fas fa-user-plus'></i>
-        </span>
-        <span>Add contact</span>
-      </button>
+      <>
+        {current ? (
+          <>
+            <button
+              type='submit'
+              className='button is-warning is-fullwidth has-shadow mb-1'
+            >
+              <span className='icon'>
+                <i className='fas fa-user-edit'></i>
+              </span>
+              <span>Update contact</span>
+            </button>
+            <button
+              className='button is-dark is-fullwidth has-shadow'
+              onClick={clearAll}
+            >
+              <span className='icon'>
+                <i className='fas fa-broom'></i>
+              </span>
+              <span>Clear</span>
+            </button>
+          </>
+        ) : (
+          <button
+            type='submit'
+            className='button is-primary is-fullwidth has-shadow'
+          >
+            <span className='icon'>
+              <i className='fas fa-user-plus'></i>
+            </span>
+            <span>Add contact</span>
+          </button>
+        )}
+      </>
     </form>
   )
 }
