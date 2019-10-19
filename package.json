@@ -9,7 +9,13 @@
     "url": "https://github.com/max-jellycat/contact-keeper/issues"
   },
   "homepage": "https://github.com/max-jellycat/contact-keeper#readme",
+  "husky": {
+    "hooks": {
+      "pre-commit": "npx lerna run --concurrency 1 --stream precommit"
+    }
+  },
   "devDependencies": {
+    "husky": "^3.0.9",
     "lerna": "^3.18.1"
   }
 }
