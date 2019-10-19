@@ -7,15 +7,16 @@ const isProd = process.env.NODE_ENV === 'production';
 const app = express();
 app.use(bodyParser.json());
 
-app.get('/', (req, res) => res.json({ message: 'Hello World to the Contact Keeper API!' }));
-
 if (isProd) {
   const buildPath = path.resolve(__dirname, '../../front/build');
   const indexHtml = path.join(buildPath, 'index.html');
+  console.log(indexHtml);
 
   app.use(express.static(buildPath));
 
   app.get('*', (req, res) => res.sendFile(indexHtml));
+} else {
+  app.get('/', (req, res) => res.json({ message: 'Hello World to the Contact Keeper API!' }));
 }
 
 // Define routes
