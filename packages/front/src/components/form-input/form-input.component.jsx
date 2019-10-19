@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const FormInput = ({
   handleChange, type, name, placeholder, icon, value,
@@ -19,5 +20,14 @@ const FormInput = ({
     </div>
   </div>
 );
+
+FormInput.propTypes = {
+  handleChange: PropTypes.func.isRequired,
+  type: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  placeholder: PropTypes.string.isRequired,
+  icon: PropTypes.string.isRequired,
+  value: PropTypes.string.isRequired,
+};
 
 export default FormInput;

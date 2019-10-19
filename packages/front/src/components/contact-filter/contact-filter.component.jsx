@@ -26,7 +26,7 @@ const ContactFilter = () => {
           />
         </div>
       </div>
-      <button className="button is-dark has-shadow">
+      <button type="button" className="button is-dark has-shadow">
         <span className="icon">
           <i className="fas fa-broom" />
         </span>

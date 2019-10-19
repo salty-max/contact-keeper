@@ -31,10 +31,10 @@ const Navbar = ({ title, icon }) => (
     <div className="navbar-menu">
       <div className="navbar-end">
         <Link to="/" className="navbar-item">
-            Home
+          Home
         </Link>
         <Link to="/about" className="navbar-item">
-            About
+          About
         </Link>
       </div>
     </div>
@@ -42,8 +42,8 @@ const Navbar = ({ title, icon }) => (
 );
 
 Navbar.propTypes = {
-  title: PropTypes.string.isRequired,
-  icon: PropTypes.string.isRequired,
+  title: PropTypes.string,
+  icon: PropTypes.string,
 };
 
 Navbar.defaultProps = {
