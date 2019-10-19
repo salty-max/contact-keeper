@@ -9,7 +9,7 @@ before_install:
 
 install:
   - yarn global add lerna jest
-  - lerna bootstrap
+  - yarn bootstrap
 script:
   - yarn test
   - yarn build
