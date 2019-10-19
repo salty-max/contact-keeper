@@ -14,7 +14,8 @@
     "clean": "lerna clean",
     "lint": "lerna run lint --stream",
     "start": "lerna run start --stream",
-    "test": "lerna run test --stream"
+    "test": "lerna run test --stream",
+    "build": "lerna run build --stream"
   },
   "husky": {
     "hooks": {
