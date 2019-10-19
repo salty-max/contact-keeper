@@ -6,6 +6,7 @@ cache: yarn
 
 before_install:
   - curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version [1.19.1]
+  - export PATH="$HOME/.yarn/bin:$PATH"
   - npm config set "@fortawesome:registry" https://npm.fontawesome.com/
   - npm config set "//npm.fontawesome.com/:_authToken" $FA_TOKEN
 
