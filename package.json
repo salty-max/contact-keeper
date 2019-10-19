@@ -10,6 +10,7 @@
   },
   "homepage": "https://github.com/max-jellycat/contact-keeper#readme",
   "devDependencies": {
+    "husky": "^3.0.9",
     "lerna": "^3.18.1"
   }
 }
