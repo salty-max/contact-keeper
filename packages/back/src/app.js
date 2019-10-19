@@ -1,11 +1,9 @@
 import express from 'express';
-import bodyParser from 'body-parser';
+// import bodyParser from 'body-parser';
 
 const app = express();
 
-app.get('/', (req, res) => res.json({
-  message: 'Hello World to the Contact Keeper API!',
-}));
+app.get('/', (req, res) => res.json({ message: 'Hello World to the Contact Keeper API!' }));
 
 // Define routes
 app.use('/api/users', require('./routes/users'));

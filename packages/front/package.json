@@ -17,10 +17,10 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "cross-env CI=true react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "lint": "npx eslint --fix src/**/*.js[x]",
-    "precommit": "lint-staged"
+    "precommit": "lint-staged && yarn test"
   },
   "eslintConfig": {
     "env": {
@@ -69,6 +69,7 @@
   },
   "devDependencies": {
     "@fortawesome/fontawesome-pro": "^5.11.2",
+    "cross-env": "^6.0.3",
     "eslint": "^6.5.1",
     "eslint-config-airbnb": "^18.0.1",
     "eslint-plugin-import": "^2.18.2",
