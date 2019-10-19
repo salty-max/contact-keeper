@@ -48,6 +48,7 @@ const ContactItem = ({ contact }) => {
         </ul>
         <div className="actions">
           <button
+            type="button"
             className="button is-small is-dark is-outlined"
             onClick={() => setCurrent(contact)}
           >
@@ -57,6 +58,7 @@ const ContactItem = ({ contact }) => {
             <span>Edit</span>
           </button>
           <button
+            type="button"
             className="button is-small is-danger is-outlined"
             onClick={handleDelete}
           >
@@ -72,7 +74,13 @@ const ContactItem = ({ contact }) => {
 };
 
 ContactItem.propTypes = {
-  contact: PropTypes.object.isRequired,
+  contact: PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    email: PropTypes.string.isRequired,
+    phone: PropTypes.string.isRequired,
+    type: PropTypes.string.isRequired,
+  }).isRequired,
 };
 
 export default ContactItem;

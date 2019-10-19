@@ -1,13 +1,28 @@
 language: node_js
 node_js: node
-cache:
-  yarn: true
-  directories:
-    - node_modules
-    - client/node_modules
+
+cache: yarn
+
 before_install:
   - npm config set @fortawesome:registry=https://npm.fontawesome.com/
   - npm config set //npm.fontawesome.com/:_authToken$FONT_AWESOME_AUTH_TOKEN
+
+install:
+  - yarn global add lerna jest
+  - lerna bootstrap
+
+matrix:
+  include:
+    - name: "Front Pipeline"
+      env: PACKAGE_LOCATION=packages/front
+    - name: "Back Pipeline"
+      env: PACKAGE_LOCATION=packages/back
+
+script:
+  - cd $PACKAGE_LOCATION
+  - yarn test
+  - yarn build
+
 deploy:
   provider: heroku
   api_key:

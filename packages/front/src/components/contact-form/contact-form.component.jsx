@@ -34,8 +34,7 @@ const ContactForm = () => {
   } = contact;
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
-    setContact({ ...contact, [name]: value });
+    setContact({ ...contact, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = (e) => {
@@ -82,28 +81,26 @@ const ContactForm = () => {
         handleChange={handleChange}
       />
       <div className="field">
-        <div className="control">
-          <label className="radio">
-            <input
-              type="radio"
-              name="type"
-              value="personal"
-              checked={type === 'personal'}
-              onChange={handleChange}
-            />
-            Personal
-          </label>
-          <label className="radio">
-            <input
-              type="radio"
-              name="type"
-              value="professional"
-              checked={type === 'professional'}
-              onChange={handleChange}
-            />
-            Professional
-          </label>
-        </div>
+        <input
+          className="is-checkradio is-rtl"
+          type="radio"
+          id="personal"
+          name="type"
+          value="personal"
+          checked={type === 'personal'}
+          onChange={handleChange}
+        />
+        <label htmlFor="personal">Personal</label>
+        <input
+          className="is-checkradio is-rtl"
+          type="radio"
+          id="professional"
+          name="type"
+          value="professional"
+          checked={type === 'professional'}
+          onChange={handleChange}
+        />
+        <label htmlFor="professional">Professional</label>
       </div>
       <>
         {current ? (
@@ -118,6 +115,7 @@ const ContactForm = () => {
               <span>Update contact</span>
             </button>
             <button
+              type="button"
               className="button is-dark is-fullwidth has-shadow"
               onClick={clearAll}
             >
