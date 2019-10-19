@@ -10,16 +10,7 @@ before_install:
 install:
   - yarn global add lerna jest
   - lerna bootstrap
-
-matrix:
-  include:
-    - name: "Front Pipeline"
-      env: PACKAGE_LOCATION=packages/front
-    - name: "Back Pipeline"
-      env: PACKAGE_LOCATION=packages/back
-
 script:
-  - cd $PACKAGE_LOCATION
   - yarn test
   - yarn build
 
