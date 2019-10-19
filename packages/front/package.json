@@ -2,6 +2,9 @@
   "name": "@contact-keeper/front",
   "version": "0.0.1",
   "private": true,
+  "engines": {
+    "node": "10.16.3"
+  },
   "dependencies": {
     "axios": "^0.19.0",
     "bulma": "^0.7.5",
