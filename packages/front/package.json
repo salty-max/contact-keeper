@@ -21,7 +21,8 @@
     "test": "cross-env CI=true react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "lint": "npx eslint --fix src/**/*.js[x]",
-    "precommit": "lint-staged && yarn test"
+    "precommit": "lint-staged && yarn test",
+    "postinstall": "yarn build"
   },
   "eslintConfig": {
     "env": {
