@@ -1,7 +1,7 @@
-import express from 'express';
-import connectDatabase from '../config/db';
+const express = require('express');
+const connectDatabase = require('../config/db');
 
-import app from './app';
+const app = require('./app');
 
 // Connect database
 connectDatabase();
