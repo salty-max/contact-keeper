@@ -9,6 +9,9 @@
     "url": "https://github.com/max-jellycat/contact-keeper/issues"
   },
   "homepage": "https://github.com/max-jellycat/contact-keeper#readme",
+  "engines": {
+    "node": "12.12.0"
+  },
   "scripts": {
     "bootstrap": "lerna link && lerna exec -- yarn",
     "clean": "lerna clean",
