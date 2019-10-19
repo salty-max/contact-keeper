@@ -1,0 +1,13 @@
+language: node_js
+node_js: node_js
+cache:
+  directories:
+    - node_modules
+    - client/node_modules
+deploy:
+  provider: heroku
+  api_key:
+    secure: S9gCAHdlvdOV+riuT3J0bkXYE9uTldM8BoZmbYKYZ95fIIsblHf4ib/T5in9zaJShRsnAIso8wiXPhspJBt/I0eAL0Gih9j6ZcP2aPhvCi+iTaXmIZKjqh3dQfmMtGt7jbWfmxMxlMnJ3qAIIpXb+1Uae39nZgAeia/0hiHnlT52fgc/uO1CR6tF2cxjL0muo6BOBYJw4hyj60PpMFlnB5PPpLv8tT/A5oOqNVrDzK0boj0R959hUjcCb1EXabJLMsZv0k6EtqrMOPa6FjFWFq0aGUyrQomYCu3HBXj9vH6oJyY0YAd8DaW7xKIEjAY98ton1qVDaS2qhpslyS5FM8ajrvmq9wpzP3yWvR8zlFAmMG5tEuuJs7aQJqJBK2g9qyUFuKdqPEVf17anqM6AKHdA6EropPKGi9uOX9uFNgrtyA+/8Nuc9t9Jtu/TqxtXUkTqVaye11PnAvRf7VbO1iQ0CGzAsEAkB/XDkvgKpuh4ID8T3/Z5CeJz30iyYRyX/UFUwYw8QJVXcWHR3atmk2mAZFY77yweoqWiBhKBTCQWY5CsB0qouODeIz1zpJYLJ8yLjcpdTSBZNY/LZi16r9mpzEoZBalPJrKYwQUDeXocj3k/CNyCsrQh+voECCRE8SJu5UJOB2uKaOHzEtokab0w4pqAFkYtSA/RkQ4hR5c=
+  app: custodi
+  on:
+    repo: max-jellycat/contact-keeper
