@@ -17,12 +17,12 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build:react": "react-scripts build",
     "test": "cross-env CI=true react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "lint": "npx eslint --fix src/**/*.js[x]",
     "precommit": "lint-staged && yarn test",
-    "postinstall": "yarn build"
+    "build": "yarn build:react"
   },
   "eslintConfig": {
     "env": {
