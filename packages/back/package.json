@@ -8,6 +8,7 @@
   },
   "scripts": {
     "start": "nodemon --exec ./node_modules/@babel/node/bin/babel-node.js src/index",
+    "prod": "node ./node_modules/@babel/node/bin/babel-node.js src/index",
     "build": "npx babel src -d build",
     "lint": "npx eslint --fix *.js src test *.js",
     "test": "jest",
