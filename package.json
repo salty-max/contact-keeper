@@ -1,5 +1,5 @@
 {
-  "name": "contact-keeper",
+  "name": "custodi",
   "version": "0.0.1",
   "description": "",
   "main": "index.js",
@@ -7,14 +7,20 @@
     "node": "10.16.3"
   },
   "scripts": {
-    "start": "nodemon --exec src/index",
-    "prod": "node index.js",
+    "server": "nodemon index.js",
+    "start": "node index.js",
+    "dev": "concurrently \"yarn server\" \"yarn client:start\"",
+    "client:start": "cd client && yarn start",
+    "client:install": "cd client && yarn",
     "lint": "npx eslint --fix *.js test *.js",
-    "lint:all": "npm run lint --prefix client && npm run lint",
-    "test:all": "npm run test --prefix client && npm run test",
+    "client:lint": "cd client &&  yarn lint",
+    "lint:all": "yarn lint && yarn client:lint",
     "test": "jest",
-    "precommit": "lint-staged && npm run test",
-    "heroku-postbuild": "cd client && npm i && npm run build"
+    "client:test": "cd client && yarn test",
+    "test:all": "yarn test && yarn client:test",
+    "precommit": "lint-staged && yarn test",
+    "client:precommit": "cd client && yarn precommit",
+    "heroku-postbuild": "cd client && yarn && yarn build"
   },
   "jest": {
     "testEnvironment": "node",
@@ -25,18 +31,19 @@
   },
   "lint-staged": {
     "**/*.js": [
-      "npm run lint",
+      "yarn lint",
       "git add"
     ]
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run precommit --prefix client && npm run precommit"
+      "pre-commit": "yarn precommit && yarn client:precommit"
     }
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
+    "concurrently": "^5.0.0",
     "config": "^3.2.2",
     "express": "^4.17.1",
     "express-validator": "^6.2.0",

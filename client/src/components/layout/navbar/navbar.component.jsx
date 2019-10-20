@@ -48,7 +48,7 @@ Navbar.propTypes = {
 
 Navbar.defaultProps = {
   title: 'Contact Keeper',
-  icon: 'address-book',
+  icon: 'id-card',
 };
 
 export default Navbar;

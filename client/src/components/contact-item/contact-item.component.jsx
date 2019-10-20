@@ -14,7 +14,7 @@ const ContactItem = ({ contact }) => {
 
   const handleDelete = () => {
     deleteContact(id);
-    contact.id === current.id && clearCurrent();
+    current && contact.id === current.id && clearCurrent();
   };
 
   return (
