@@ -3,8 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "engines": {
-    "node": "10.16.3",
-    "yarn": "1.19.1"
+    "node": "10.16.3"
   },
   "dependencies": {
     "@fortawesome/fontawesome-pro": "^5.11.2",
@@ -26,8 +25,8 @@
     "test": "cross-env CI=true react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "lint": "npx eslint --fix src/**/*.js[x]",
-    "precommit": "lint-staged && yarn test",
-    "postinstall": "yarn build"
+    "precommit": "lint-staged && npm run test",
+    "postinstall": "npm run build"
   },
   "eslintConfig": {
     "env": {
@@ -61,7 +60,7 @@
   },
   "lint-staged": {
     "src/**/*.js[x]": [
-      "yarn lint",
+      "npm run lint",
       "git add"
     ]
   },
