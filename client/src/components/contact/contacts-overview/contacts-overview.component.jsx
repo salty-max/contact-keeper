@@ -15,7 +15,7 @@ const ContactsOverview = () => {
   return (
     <div className="contacts-overview">
       <TransitionGroup>
-        {arrayToShow.map(contact => (
+        {arrayToShow.map((contact) => (
           <CSSTransition key={contact.id} timeout={500} classNames="item">
             <ContactItem contact={contact} />
           </CSSTransition>

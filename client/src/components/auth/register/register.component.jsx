@@ -13,12 +13,14 @@ const Register = () => {
     setUser({ ...user, [target.name]: target.value });
   };
 
-  const handleSubmit = e => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     console.log('User', user);
   };
 
-  const { name, email, password, passwordConfirm } = user;
+  const {
+    name, email, password, passwordConfirm,
+  } = user;
 
   return (
     <div className="register-page">

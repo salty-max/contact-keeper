@@ -27,7 +27,7 @@ const AuthState = ({ children }) => {
 
   const [state, dispatch] = useReducer(
     process.env.NODE_ENV !== 'production' ? logger(AuthReducer) : AuthReducer,
-    initialState
+    initialState,
   );
 
   const loadUser = () => {};

@@ -9,7 +9,7 @@ const ContactFilter = () => {
     if (!filtered) text.current.value = '';
   }, [filtered]);
 
-  const handleChange = e => {
+  const handleChange = (e) => {
     text.current.value ? filterContacts(e.target.value) : clearFilter();
   };
 

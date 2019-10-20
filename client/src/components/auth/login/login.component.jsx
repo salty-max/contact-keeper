@@ -11,7 +11,7 @@ const Login = () => {
     setUser({ ...user, [target.name]: target.value });
   };
 
-  const handleSubmit = e => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     console.log('User', user);
   };

@@ -4,8 +4,10 @@ import FormInput from '../../helpers/form-input/form-input.component';
 import ContactContext from '../../../context/contact/contact.context';
 
 const ContactForm = () => {
-  const { addContact, updateContact, clearCurrent, current } = useContext(
-    ContactContext
+  const {
+    addContact, updateContact, clearCurrent, current,
+  } = useContext(
+    ContactContext,
   );
 
   const [contact, setContact] = useState({
@@ -27,13 +29,15 @@ const ContactForm = () => {
     }
   }, [current]);
 
-  const { name, email, phone, type } = contact;
+  const {
+    name, email, phone, type,
+  } = contact;
 
-  const handleChange = e => {
+  const handleChange = (e) => {
     setContact({ ...contact, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = e => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     current ? updateContact(contact) : addContact(contact);
     setContact({

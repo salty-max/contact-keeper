@@ -49,10 +49,10 @@ const ContactState = ({ children }) => {
     process.env.NODE_ENV !== 'production'
       ? logger(ContactReducer)
       : ContactReducer,
-    initialState
+    initialState,
   );
 
-  const addContact = contact => {
+  const addContact = (contact) => {
     dispatch({
       type: ADD_CONTACT,
       payload: {
@@ -62,21 +62,21 @@ const ContactState = ({ children }) => {
     });
   };
 
-  const updateContact = contact => {
+  const updateContact = (contact) => {
     dispatch({
       type: UPDATE_CONTACT,
       payload: contact,
     });
   };
 
-  const deleteContact = id => {
+  const deleteContact = (id) => {
     dispatch({
       type: DELETE_CONTACT,
       payload: id,
     });
   };
 
-  const setCurrent = contact => {
+  const setCurrent = (contact) => {
     dispatch({
       type: SET_CURRENT,
       payload: contact,
@@ -89,7 +89,7 @@ const ContactState = ({ children }) => {
     });
   };
 
-  const filterContacts = text => {
+  const filterContacts = (text) => {
     dispatch({
       type: FILTER_CONTACTS,
       payload: text,
