@@ -8,7 +8,7 @@
   },
   "scripts": {
     "start": "nodemon --exec src/index",
-    "client:install": "npm i --prefix client",
+    "install": "npm i && npm i --prefix client",
     "prod": "node src/index",
     "lint": "npx eslint --fix *.js test *.js",
     "lint:all": "npm run lint --prefix client && npm run lint",
