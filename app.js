@@ -8,7 +8,7 @@ const app = express();
 app.use(bodyParser.json());
 
 if (isProd) {
-  const buildPath = path.resolve(__dirname, '../../front/build');
+  const buildPath = path.resolve(__dirname, 'client/build');
   const indexHtml = path.join(buildPath, 'index.html');
   console.log(indexHtml);
 
@@ -16,7 +16,9 @@ if (isProd) {
 
   app.get('*', (req, res) => res.sendFile(indexHtml));
 } else {
-  app.get('/', (req, res) => res.json({ message: 'Hello World to the Contact Keeper API!' }));
+  app.get('/', (req, res) =>
+    res.json({ message: 'Hello World to the Contact Keeper API!' })
+  );
 }
 
 // Define routes

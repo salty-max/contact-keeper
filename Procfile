@@ -1,1 +1,1 @@
-web: cd packages/back && npm run prod
+web: npm run prod

@@ -1,32 +1,59 @@
 {
   "name": "contact-keeper",
   "version": "0.0.1",
+  "description": "",
   "main": "index.js",
-  "repository": "git@github.com:max-jellycat/contact-keeper",
-  "author": "max-jellycat <max@jellycat.fr>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/max-jellycat/contact-keeper/issues"
-  },
-  "homepage": "https://github.com/max-jellycat/contact-keeper#readme",
   "engines": {
     "node": "10.16.3"
   },
   "scripts": {
-    "bootstrap": "lerna link && lerna exec -- npm i",
-    "clean": "lerna clean",
-    "lint": "lerna run lint --stream",
-    "start": "lerna run start --stream",
-    "test": "lerna run test --stream",
-    "build": "lerna run build --stream"
+    "start": "nodemon --exec src/index",
+    "prod": "node src/index",
+    "lint": "npx eslint --fix *.js src test *.js",
+    "lint:all": "npm run lint --prefix client && npm run lint",
+    "test:all": "npm run test --prefix client && npm run test",
+    "test": "jest",
+    "precommit": "lint-staged && npm run test",
+    "heroku-postbuild": "cd client && yarn && yarn run build"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ]
+  },
+  "lint-staged": {
+    "**/*.js": [
+      "npm run lint",
+      "git add"
+    ]
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npx lerna run --concurrency 1 --stream precommit"
+      "pre-commit": "npm run precommit --prefix client && npm run precommit"
     }
   },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "config": "^3.2.2",
+    "express": "^4.17.1",
+    "express-validator": "^6.2.0",
+    "global": "^4.4.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.7.1"
+  },
   "devDependencies": {
-    "husky": "^3.0.9",
-    "lerna": "^3.18.1"
-  }
+    "eslint": "^6.5.1",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "jest": "^24.9.0",
+    "lint-staged": "^9.4.2",
+    "nodemon": "^1.19.3",
+    "prettier": "^1.18.2",
+    "supertest": "^4.0.2"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
