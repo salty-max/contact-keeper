@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
-import ContactContext from '../../context/contact/contact.context';
+import ContactContext from '../../../context/contact/contact.context';
 
 import ContactItem from '../contact-item/contact-item.component';
 
@@ -15,7 +15,7 @@ const ContactsOverview = () => {
   return (
     <div className="contacts-overview">
       <TransitionGroup>
-        {arrayToShow.map((contact) => (
+        {arrayToShow.map(contact => (
           <CSSTransition key={contact.id} timeout={500} classNames="item">
             <ContactItem contact={contact} />
           </CSSTransition>

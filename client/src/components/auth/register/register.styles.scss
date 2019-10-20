@@ -1,0 +1,16 @@
+.register-page {
+  width: 60%;
+  margin: 0 auto;
+
+  .title {
+    text-align: center;
+  }
+
+  .card {
+    box-shadow: none;
+  }
+
+  .input {
+    margin-bottom: $pm-size;
+  }
+}

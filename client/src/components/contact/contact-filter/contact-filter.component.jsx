@@ -1,5 +1,5 @@
 import React, { useContext, useRef, useEffect } from 'react';
-import ContactContext from '../../context/contact/contact.context';
+import ContactContext from '../../../context/contact/contact.context';
 
 const ContactFilter = () => {
   const { filterContacts, clearFilter, filtered } = useContext(ContactContext);
@@ -9,7 +9,7 @@ const ContactFilter = () => {
     if (!filtered) text.current.value = '';
   }, [filtered]);
 
-  const handleChange = (e) => {
+  const handleChange = e => {
     text.current.value ? filterContacts(e.target.value) : clearFilter();
   };
 

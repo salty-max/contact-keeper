@@ -7,6 +7,7 @@
 @import '~@fortawesome/fontawesome-pro/scss/brands';
 @import '~@fortawesome/fontawesome-pro/scss/solid';
 @import '~@fortawesome/fontawesome-pro/scss/fontawesome';
+@import '~@fortawesome/fontawesome-pro/scss/duotone';
 
 // Pages
 @import './pages/home/home.styles.scss';
@@ -14,7 +15,9 @@
 
 // Components
 @import './components/layout/navbar/navbar.styles';
-@import './components/contacts-overview/contacts-overview.styles';
-@import './components/contact-item/contact-item.styles';
-@import './components/contact-form/contact-form.styles';
-@import './components/contact-filter/contact-filter.styles';
+@import './components/contact/contacts-overview/contacts-overview.styles';
+@import './components/contact/contact-item/contact-item.styles';
+@import './components/contact/contact-form/contact-form.styles';
+@import './components/contact/contact-filter/contact-filter.styles';
+@import './components/auth/login/login.styles';
+@import './components/auth/register/register.styles';

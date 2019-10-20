@@ -1,15 +1,11 @@
 import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
-import ContactContext from '../../context/contact/contact.context';
+import ContactContext from '../../../context/contact/contact.context';
 
 const ContactItem = ({ contact }) => {
-  const {
-    id, name, email, phone, type,
-  } = contact;
-  const {
-    deleteContact, setCurrent, clearCurrent, current,
-  } = useContext(
-    ContactContext,
+  const { id, name, email, phone, type } = contact;
+  const { deleteContact, setCurrent, clearCurrent, current } = useContext(
+    ContactContext
   );
 
   const handleDelete = () => {
@@ -63,7 +59,7 @@ const ContactItem = ({ contact }) => {
             onClick={handleDelete}
           >
             <span className="icon">
-              <i className="fas fa-times" />
+              <i className="fas fa-trash-alt" />
             </span>
             <span>Delete</span>
           </button>

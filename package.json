@@ -19,6 +19,7 @@
     "client:test": "cd client && yarn test",
     "test:all": "yarn test && yarn client:test",
     "client:precommit": "cd client && yarn precommit",
+    "clean": "rm -rf node_modules && cd client && rm -rf node_modules",
     "heroku-postbuild": "cd client && yarn && yarn build"
   },
   "jest": {

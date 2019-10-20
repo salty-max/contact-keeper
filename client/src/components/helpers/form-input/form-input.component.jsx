@@ -1,9 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const FormInput = ({
-  handleChange, type, name, placeholder, icon, value,
-}) => (
+const FormInput = ({ handleChange, type, name, placeholder, icon, value }) => (
   <div className="field">
     <div className="control has-icons-left">
       <input
