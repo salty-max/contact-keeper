@@ -42,7 +42,7 @@ const Login = () => {
             />
             <button type="submit" className="button is-primary has-shadow">
               <span className="icon">
-                <i className="fas fa-check"></i>
+                <i className="fas fa-check" />
               </span>
               <span>Submit</span>
             </button>

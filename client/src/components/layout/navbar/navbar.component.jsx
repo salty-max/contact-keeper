@@ -46,12 +46,14 @@ const Navbar = ({ title, icon }) => {
             {user ? (
               <>
                 <div className="navbar-link">
-                  Hello <span className="pl lead">{user.name}</span>
+                  Hello
+                  {' '}
+                  <span className="pl lead">{user.name}</span>
                 </div>
                 <div className="navbar-item">
                   <button className="button is-outlined is-danger">
                     <span className="icon">
-                      <i className="fas fa-sign-out"></i>
+                      <i className="fas fa-sign-out" />
                     </span>
                     <span>Logout</span>
                   </button>
@@ -62,7 +64,7 @@ const Navbar = ({ title, icon }) => {
                 <div className="navbar-item">
                   <Link to="/login" className="button is-outlined is-success">
                     <span className="icon">
-                      <i className="fas fa-sign-in"></i>
+                      <i className="fas fa-sign-in" />
                     </span>
                     <span>Login</span>
                   </Link>
@@ -70,7 +72,7 @@ const Navbar = ({ title, icon }) => {
                 <div className="navbar-item">
                   <Link to="/register" className="button is-outlined is-light">
                     <span className="icon">
-                      <i className="fas fa-user-plus"></i>
+                      <i className="fas fa-user-plus" />
                     </span>
                     <span>Register</span>
                   </Link>
