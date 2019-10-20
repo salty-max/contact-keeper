@@ -14,7 +14,7 @@
     "test:all": "npm run test --prefix client && npm run test",
     "test": "jest",
     "precommit": "lint-staged && npm run test",
-    "heroku-postbuild": "cd client && yarn && yarn run build"
+    "heroku-postbuild": "cd client && npm i && npm run build"
   },
   "jest": {
     "testEnvironment": "node",
