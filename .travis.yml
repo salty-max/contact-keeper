@@ -9,11 +9,11 @@ before_install:
   - npm config set "//npm.fontawesome.com/:_authToken" $FA_TOKEN
 
 install:
-  - npm -g i lerna jest
-  - npm run bootstrap
+  - npm -g i jest
 script:
-  - npm run test
-  - npm run build
+  - npm i && npm i --prefix client
+  - npm run lint:all
+  - npm run test:all
 
 deploy:
   provider: heroku

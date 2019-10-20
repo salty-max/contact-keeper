@@ -1,5 +1,5 @@
-import request from 'supertest';
-import app from '../src/app';
+const request = require('supertest');
+const app = require('../app');
 
 describe('app', () => {
   it('GETs / and should obtain { message: "Hello World to the Contact Keeper API!" }', async () => {
