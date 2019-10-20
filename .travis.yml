@@ -11,7 +11,7 @@ before_install:
 install:
   - npm -g i jest
 script:
-  - npm run install
+  - npm i && npm i --prefix client
   - npm run lint:all
   - npm run test:all
 
