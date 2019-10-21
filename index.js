@@ -11,4 +11,4 @@ app.use(express.json({ extended: false }));
 
 const PORT = process.env.PORT || 5000;
 
-app.listen(PORT, () => console.log(process.env.NODE_ENV));
+app.listen(PORT, () => console.log(`Server running on port ${PORT} 🚀`));

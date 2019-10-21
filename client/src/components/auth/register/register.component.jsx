@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import FormInput from '../../helpers/form-input/form-input.component';
+import AlertContext from '../../../context/alert/alert.context';
 
 const Register = () => {
   const [user, setUser] = useState({
@@ -9,18 +10,25 @@ const Register = () => {
     passwordConfirm: '',
   });
 
+  const { setAlert } = useContext(AlertContext);
+
+  const {
+    name, email, password, passwordConfirm,
+  } = user;
+
   const handleChange = ({ target }) => {
     setUser({ ...user, [target.name]: target.value });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('User', user);
+    if (!name || !email || !password) setAlert('All fields must be filled', 'danger');
+    else if (password !== passwordConfirm) setAlert('Passwords must match', 'danger');
+    else {
+      console.log('User', user);
+    }
   };
 
-  const {
-    name, email, password, passwordConfirm,
-  } = user;
 
   return (
     <div className="register-page">
