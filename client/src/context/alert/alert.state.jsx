@@ -1,7 +1,7 @@
 import React, { useReducer } from 'react';
 import PropTypes from 'prop-types';
 import uuid from 'uuid';
-import logger from 'use-reducer-logger';
+// import logger from 'use-reducer-logger';
 
 import { SET_ALERT, REMOVE_ALERT } from '../types';
 
@@ -11,7 +11,8 @@ import AlertReducer from './alert.reducer';
 const AlertState = ({ children }) => {
   const initialState = [];
   const [state, dispatch] = useReducer(
-    process.env.NODE_ENV === 'development' ? logger(AlertReducer) : AlertReducer,
+    // process.env.NODE_ENV === 'development' ? logger(AlertReducer) : AlertReducer,
+    AlertReducer,
     initialState,
   );
 

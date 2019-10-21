@@ -20,6 +20,8 @@
     "test:all": "yarn test && yarn client:test",
     "client:precommit": "cd client && yarn precommit",
     "clean": "rm -rf node_modules && cd client && rm -rf node_modules",
+    "precommit": "lint-staged && yarn test",
+    "precommit:all": "yarn precommit && cd client && yarn precommit",
     "heroku-postbuild": "cd client && yarn && yarn build"
   },
   "jest": {
@@ -62,7 +64,7 @@
   "license": "ISC",
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged && yarn test"
+      "pre-commit": "yarn precommit:all"
     }
   }
 }

@@ -1,5 +1,5 @@
 import React, { useReducer } from 'react';
-import logger from 'use-reducer-logger';
+// import logger from 'use-reducer-logger';
 import PropTypes from 'prop-types';
 
 import uuid from 'uuid';
@@ -46,9 +46,10 @@ const ContactState = ({ children }) => {
   };
 
   const [state, dispatch] = useReducer(
-    process.env.NODE_ENV === 'development'
-      ? logger(ContactReducer)
-      : ContactReducer,
+    // process.env.NODE_ENV === 'development'
+    //   ? logger(ContactReducer)
+    //   : ContactReducer,
+    ContactReducer,
     initialState,
   );
 
