@@ -51,7 +51,7 @@ const Navbar = ({ title, icon }) => {
                   <span className="pl lead">{user.name}</span>
                 </div>
                 <div className="navbar-item">
-                  <button className="button is-outlined is-danger">
+                  <button type="button" className="button is-outlined is-danger">
                     <span className="icon">
                       <i className="fas fa-sign-out" />
                     </span>
