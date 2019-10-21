@@ -11,7 +11,7 @@ import AlertReducer from './alert.reducer';
 const AlertState = ({ children }) => {
   const initialState = [];
   const [state, dispatch] = useReducer(
-    process.env.NODE_ENV !== 'production' ? logger(AlertReducer) : AlertReducer,
+    process.env.NODE_ENV === 'development' ? logger(AlertReducer) : AlertReducer,
     initialState,
   );
 

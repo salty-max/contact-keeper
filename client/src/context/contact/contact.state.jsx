@@ -46,7 +46,7 @@ const ContactState = ({ children }) => {
   };
 
   const [state, dispatch] = useReducer(
-    process.env.NODE_ENV !== 'production'
+    process.env.NODE_ENV === 'development'
       ? logger(ContactReducer)
       : ContactReducer,
     initialState,
